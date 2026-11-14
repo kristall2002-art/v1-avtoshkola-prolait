@@ -22,7 +22,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%231f5fa8%22/%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2217%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%225%22/%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%225%22%20fill%3D%22%23ffc54d%22/%3E%3C/svg%3E">
 <script>document.documentElement.classList.add('js');try{var _i=parseInt(localStorage.getItem('nb_fs2'),10),_f=[1,1.15,1.3,1.5][_i];if(_f)document.documentElement.style.setProperty('--fs',_f)}catch(e){}</script>
 <style id="hero-timing">:root{--hero-d:1.2s}</style>
-<link rel="preload" as="image" href="img/hero-poster.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-poster.jpg?v=2" fetchpriority="high">
 <!-- шрифты лежат внутри сайта: Google Fonts у российской аудитории режется -->
 <style>
 @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/inter-400-cyrillic-ext.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F}
@@ -606,6 +606,16 @@ html[data-hc="1"] :focus-visible{outline:3px solid #ffe14d;outline-offset:2px}
 <link rel="stylesheet" href="css/nevo.css?v=20261112f">
 <link rel="stylesheet" href="css/school.css?v=1">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "DrivingSchool", "name": "Автошкола «Про-Лайт ДМД»", "telephone": "+7 (905) 555-16-25", "email": "pro-laitdmd@mail.ru", "sameAs": ["https://t.me/+79055551625", "https://vk.com/prolaitdmd"], "address": {"@type": "PostalAddress", "streetAddress": "ул. Кирова, 7/1", "addressLocality": "Домодедово", "addressCountry": "RU"}, "geo": {"@type": "GeoCoordinates", "latitude": 55.4387287, "longitude": 37.7507555}, "department": [{"@type": "DrivingSchool", "name": "Автошкола «Про-Лайт ДМД» — Автошкола и офис", "telephone": "+7 (905) 555-16-25", "address": {"@type": "PostalAddress", "streetAddress": "ул. Кирова, 7/1, пом. 022", "addressLocality": "Домодедово", "addressCountry": "RU"}, "geo": {"@type": "GeoCoordinates", "latitude": 55.4387287, "longitude": 37.7507555}}, {"@type": "DrivingSchool", "name": "Автошкола «Про-Лайт ДМД» — Автодром", "telephone": "+7 (905) 555-16-25", "address": {"@type": "PostalAddress", "streetAddress": "ГПЗ Константиново, Объездной проезд, уч. 1А", "addressLocality": "Домодедово", "addressCountry": "RU"}, "geo": {"@type": "GeoCoordinates", "latitude": 55.4317318, "longitude": 37.7083335}}], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Обучение вождению", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Course", "name": "B  — Стандарт — Стоимость"}, "price": "35000", "priceCurrency": "RUB"}, {"@type": "Offer", "itemOffered": {"@type": "Course", "name": "B  — Стандарт + — Стоимость"}, "price": "41000", "priceCurrency": "RUB"}, {"@type": "Offer", "itemOffered": {"@type": "Course", "name": "B  — ПРОФИ — Стоимость"}, "price": "46000", "priceCurrency": "RUB"}, {"@type": "Offer", "itemOffered": {"@type": "Course", "name": "B  — ПРОФИ + — Стоимость"}, "price": "53000", "priceCurrency": "RUB"}, {"@type": "Offer", "itemOffered": {"@type": "Course", "name": "A  — мотоцикл — Стоимость"}, "price": "25000", "priceCurrency": "RUB"}]}, "legalName": "ООО «ПРО-ЛАЙТ ДМД»"}</script>
+<style id="city-map-bg">
+/* Фон раздела «Как нас найти» — картинка города школы */
+#contacts .sec-bg{background:#1c2633}
+#contacts .sec-bg .a4bg{display:none}
+#contacts .sec-bg .city-bg{position:absolute;inset:0}
+#contacts .sec-bg .city-bg img{opacity:1;object-fit:cover;object-position:50% 60%}
+#contacts .sec-bg::after,html[data-theme="light"]:not([data-hc="1"]) #contacts .sec-bg::after{background:linear-gradient(180deg,rgba(10,22,40,.10) 0%,rgba(10,22,40,.30) 100%)}
+html[data-theme="dark"] #contacts .sec-bg::after{background:rgba(5,12,24,.55)}
+@media (max-width:760px){#contacts .sec-bg .city-bg img{object-position:50% 50%}}
+</style>
 </head>
 <body data-sec="0">
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
@@ -693,8 +703,8 @@ html[data-hc="1"] :focus-visible{outline:3px solid #ffe14d;outline-offset:2px}
 <!-- 1. HOME -->
     <section class="sec sec-hero active" id="home" data-title="nav_home">
       <div class="hero-bg" aria-hidden="true">
-        <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="img/hero-poster.jpg" disablepictureinpicture tabindex="-1"></video>
-        <script>(function(){var v=document.getElementById('heroVideo');if(!v)return;var c=navigator.connection;if((window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches)||(c&&c.saveData)){v.removeAttribute('autoplay');return}v.src=(window.matchMedia&&matchMedia('(max-width:768px)').matches)?'img/hero-video-mobile.mp4':'img/hero-video.mp4'})();</script>
+        <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="img/hero-poster.jpg?v=2" disablepictureinpicture tabindex="-1"></video>
+        <script>(function(){var v=document.getElementById('heroVideo');if(!v)return;var c=navigator.connection;if((window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches)||(c&&c.saveData)){v.removeAttribute('autoplay');return}v.src=(window.matchMedia&&matchMedia('(max-width:768px)').matches)?'img/hero-video-mobile.mp4?v=2':'img/hero-video.mp4?v=2'})();</script>
         <canvas class="hero-clouds" id="heroClouds"></canvas>
       </div>
       <div class="sec-scroll"><div class="wrap">
@@ -735,7 +745,7 @@ html[data-hc="1"] :focus-visible{outline:3px solid #ffe14d;outline-offset:2px}
 
 <!-- contacts -->
     <section class="sec nk-sec" id="contacts" data-title="nav_contacts">
-      <div class="sec-bg" aria-hidden="true"><div class="a4bg vl-scheme" aria-hidden="true"><svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" focusable="false"><path class="vls-wave" d="M0 820 C 300 790, 700 850, 1000 810 S 1400 780, 1600 820M0 860 C 400 830, 800 890, 1600 850"/><path id="vlr1" class="vls-route" d="M1129 364 Q831 569 471 536"/><circle class="vls-ring" cx="1129" cy="364" r="16" style="animation-delay:-0.00s"/><circle class="vls-pt" cx="1129" cy="364" r="9"/><circle class="vls-ring" cx="471" cy="536" r="16" style="animation-delay:-0.45s"/><circle class="vls-pt" cx="471" cy="536" r="9"/><circle class="vls-hub" cx="1129" cy="364" r="13"/><circle class="vls-dot" r="6"><animateMotion dur="4.9s" begin="-0.7s" repeatCount="indefinite"><mpath href="#vlr1"/></animateMotion></circle></svg></div></div>
+      <div class="sec-bg" aria-hidden="true"><picture class="city-bg"><source media="(max-width:760px)" srcset="img/city-bg-m.jpg"><img src="img/city-bg.jpg" alt="" loading="lazy" decoding="async"></picture><div class="a4bg vl-scheme" aria-hidden="true"><svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" focusable="false"><path class="vls-wave" d="M0 820 C 300 790, 700 850, 1000 810 S 1400 780, 1600 820M0 860 C 400 830, 800 890, 1600 850"/><path id="vlr1" class="vls-route" d="M1129 364 Q831 569 471 536"/><circle class="vls-ring" cx="1129" cy="364" r="16" style="animation-delay:-0.00s"/><circle class="vls-pt" cx="1129" cy="364" r="9"/><circle class="vls-ring" cx="471" cy="536" r="16" style="animation-delay:-0.45s"/><circle class="vls-pt" cx="471" cy="536" r="9"/><circle class="vls-hub" cx="1129" cy="364" r="13"/><circle class="vls-dot" r="6"><animateMotion dur="4.9s" begin="-0.7s" repeatCount="indefinite"><mpath href="#vlr1"/></animateMotion></circle></svg></div></div>
       <div class="sec-scroll"><div class="wrap">
         <div class="sec-head glass glow"><span class="kicker rv" style="--i:0">Контакты</span><h2 class="h2 rv" style="--i:1">Как нас найти</h2></div>
         <div class="contacts nk-contacts vl-contacts">
@@ -1851,7 +1861,6 @@ html[data-hc="1"] :focus-visible{outline:3px solid #ffe14d;outline-offset:2px}
 })();
 </script>
 <script src="js/etalon.js" defer></script>
-<script src="js/clouds.js" defer></script>
 <script src="js/title-b.js" defer></script>
 <script src="js/fit-title.js" defer></script>
 <script src="js/diag.js?v=1"></script>
